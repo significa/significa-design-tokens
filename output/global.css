@@ -5,32 +5,32 @@
 
 :root {
   --color-background: #f2f2f2;
-  --color-primary: #19191A;
+  --color-primary: #19191a;
   --color-secondary: #868686;
-  --color-tertiary: #A1A1A1;
+  --color-tertiary: #a1a1a1;
   --color-subtle: #e5e5e5;
-  --color-smooth: #D7D7D7;
+  --color-smooth: #d7d7d7;
   --color-offset: #ffffff;
-  --color-accent: #F6CE4C;
+  --color-accent: #f6ce4c;
   --color-drawing: #041395;
   --color-palette-black: #000;
   --color-palette-white: #ffffff;
   --color-palette-bic: #041395;
-  --color-palette-yellow: #F6CE4C;
-  --color-palette-red: #FF2D55;
-  --color-palette-green: #00C7BE;
-  --color-palette-purple: #AF52DE;
+  --color-palette-yellow: #f6ce4c;
+  --color-palette-red: #ff2d55;
+  --color-palette-green: #00c7be;
+  --color-palette-purple: #af52de;
   --color-palette-gray-100: #f2f2f2;
   --color-palette-gray-150: #e5e5e5;
-  --color-palette-gray-200: #D7D7D7;
-  --color-palette-gray-300: #BCBCBC;
-  --color-palette-gray-400: #A1A1A1;
+  --color-palette-gray-200: #d7d7d7;
+  --color-palette-gray-300: #bcbcbc;
+  --color-palette-gray-400: #a1a1a1;
   --color-palette-gray-500: #868686;
-  --color-palette-gray-600: #6A6A6B;
-  --color-palette-gray-700: #4F4F50;
+  --color-palette-gray-600: #6a6a6b;
+  --color-palette-gray-700: #4f4f50;
   --color-palette-gray-800: #343435;
   --color-palette-gray-850: #272728;
-  --color-palette-gray-900: #19191A;
+  --color-palette-gray-900: #19191a;
   --space-0: 0rem;
   --space-1: 0.0625rem;
   --space-2: 0.125rem;
@@ -75,7 +75,9 @@
   --opacity-xxxl: 0.8;
   --opacity-xxxxl: 0.9;
   --opacity-full: 1;
-  --font-family-sans: 'Sohne', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-family-sans: "Sohne", -apple-system, BlinkMacSystemFont, avenir next,
+    avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
+    sans-serif;
   --font-size-micro: 0.75rem;
   --font-size-sm: 1rem;
   --font-size-md: 1.125rem;
