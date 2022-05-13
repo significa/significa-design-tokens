@@ -1,36 +1,36 @@
 /**
  * Do not edit directly
- * Generated on Fri, 13 May 2022 16:59:00 GMT
+ * Generated on Fri, 13 May 2022 17:22:36 GMT
  */
 
 :root {
-  --color-background: #f2f2f2;
-  --color-primary: #19191A;
-  --color-secondary: #868686;
-  --color-tertiary: #A1A1A1;
-  --color-subtle: #e5e5e5;
-  --color-smooth: #D7D7D7;
-  --color-offset: #ffffff;
-  --color-accent: #F6CE4C;
-  --color-drawing: #041395;
-  --color-palette-black: #000;
-  --color-palette-white: #ffffff;
-  --color-palette-bic: #041395;
-  --color-palette-yellow: #F6CE4C;
-  --color-palette-red: #FF2D55;
-  --color-palette-green: #00C7BE;
-  --color-palette-purple: #AF52DE;
-  --color-palette-gray-100: #f2f2f2;
-  --color-palette-gray-150: #e5e5e5;
-  --color-palette-gray-200: #D7D7D7;
-  --color-palette-gray-300: #BCBCBC;
-  --color-palette-gray-400: #A1A1A1;
-  --color-palette-gray-500: #868686;
-  --color-palette-gray-600: #6A6A6B;
-  --color-palette-gray-700: #4F4F50;
-  --color-palette-gray-800: #343435;
-  --color-palette-gray-850: #272728;
-  --color-palette-gray-900: #19191A;
+  --color-background: hsl(46, 90%, 63%);
+  --color-primary: hsl(240, 2%, 10%);
+  --color-secondary: hsl(0, 0%, 53%);
+  --color-tertiary: hsl(240, 0%, 42%);
+  --color-subtle: hsl(240, 1%, 15%);
+  --color-smooth: hsl(240, 1%, 21%);
+  --color-offset: hsl(0, 0%, 0%);
+  --color-accent: hsl(46, 90%, 63%);
+  --color-drawing: hsl(0, 0%, 95%);
+  --color-palette-black: hsl(0, 0%, 0%);
+  --color-palette-white: hsl(0, 0%, 100%);
+  --color-palette-bic: hsl(234, 95%, 30%);
+  --color-palette-yellow: hsl(46, 90%, 63%);
+  --color-palette-red: hsl(349, 100%, 59%);
+  --color-palette-green: hsl(177, 100%, 39%);
+  --color-palette-purple: hsl(280, 68%, 60%);
+  --color-palette-gray-100: hsl(0, 0%, 95%);
+  --color-palette-gray-150: hsl(0, 0%, 90%);
+  --color-palette-gray-200: hsl(0, 0%, 84%);
+  --color-palette-gray-300: hsl(0, 0%, 74%);
+  --color-palette-gray-400: hsl(0, 0%, 63%);
+  --color-palette-gray-500: hsl(0, 0%, 53%);
+  --color-palette-gray-600: hsl(240, 0%, 42%);
+  --color-palette-gray-700: hsl(240, 1%, 31%);
+  --color-palette-gray-800: hsl(240, 1%, 21%);
+  --color-palette-gray-850: hsl(240, 1%, 15%);
+  --color-palette-gray-900: hsl(240, 2%, 10%);
   --space-0: 0rem;
   --space-1: 0.0625rem;
   --space-2: 0.125rem;

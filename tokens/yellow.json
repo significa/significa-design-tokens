@@ -1,0 +1,50 @@
+{
+  "color": {
+    "background": {
+      "value": "{color.palette.yellow}",
+      "type": "color",
+      "failedToResolve": true
+    },
+    "primary": {
+      "value": "{color.palette.gray.900}",
+      "type": "color",
+      "failedToResolve": true
+    },
+    "secondary": {
+      "value": "{color.palette.gray.500}",
+      "type": "color",
+      "failedToResolve": true
+    },
+    "tertiary": {
+      "value": "{color.palette.gray.600}",
+      "type": "color",
+      "failedToResolve": true
+    },
+    "subtle": {
+      "value": "{color.palette.gray.850}",
+      "type": "color",
+      "description": "For dividers and outlines",
+      "failedToResolve": true
+    },
+    "smooth": {
+      "value": "{color.palette.gray.800}",
+      "type": "color",
+      "failedToResolve": true
+    },
+    "offset": {
+      "value": "{color.palette.black}",
+      "type": "color",
+      "failedToResolve": true
+    },
+    "accent": {
+      "value": "{color.palette.yellow}",
+      "type": "color",
+      "failedToResolve": true
+    },
+    "drawing": {
+      "value": "{color.palette.gray.100}",
+      "type": "color",
+      "failedToResolve": true
+    }
+  }
+}

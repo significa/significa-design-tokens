@@ -3,7 +3,7 @@
  * Generated on Fri, 13 May 2022 17:22:37 GMT
  */
 
-[data-theme="dark"] {
+[data-theme="yellow"] {
   --color-drawing: var(--color-palette-gray-100);
   --color-accent: var(--color-palette-yellow);
   --color-offset: var(--color-palette-black);
@@ -11,6 +11,6 @@
   --color-subtle: var(--color-palette-gray-850);
   --color-tertiary: var(--color-palette-gray-600);
   --color-secondary: var(--color-palette-gray-500);
-  --color-primary: var(--color-palette-gray-100);
-  --color-background: var(--color-palette-gray-900);
+  --color-primary: var(--color-palette-gray-900);
+  --color-background: var(--color-palette-yellow);
 }
