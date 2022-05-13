@@ -1,9 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Fri, 13 May 2022 16:39:35 GMT
+ * Generated on Fri, 13 May 2022 16:43:33 GMT
  */
 
-:root {
+[data-theme="light"] {
   --color-drawing: var(--color-palette-bic);
   --color-accent: var(--color-palette-yellow);
   --color-offset: var(--color-palette-white);

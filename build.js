@@ -120,6 +120,7 @@ const StyleDictionary = StyleDictionaryPackage.extend({
               return token.isSource;
             },
             options: {
+              selector: `[data-theme="${theme}"]`,
               outputReferences: true,
             },
           },
