@@ -1,18 +1,18 @@
 /**
  * Do not edit directly
- * Generated on Fri, 13 May 2022 17:22:36 GMT
+ * Generated on Fri, 13 May 2022 17:34:29 GMT
  */
 
 :root {
-  --color-background: hsl(46, 90%, 63%);
+  --color-background: hsl(0, 0%, 95%);
   --color-primary: hsl(240, 2%, 10%);
   --color-secondary: hsl(0, 0%, 53%);
-  --color-tertiary: hsl(240, 0%, 42%);
-  --color-subtle: hsl(240, 1%, 15%);
-  --color-smooth: hsl(240, 1%, 21%);
-  --color-offset: hsl(0, 0%, 0%);
+  --color-tertiary: hsl(0, 0%, 63%);
+  --color-subtle: hsl(0, 0%, 90%);
+  --color-smooth: hsl(0, 0%, 84%);
+  --color-offset: hsl(0, 0%, 100%);
   --color-accent: hsl(46, 90%, 63%);
-  --color-drawing: hsl(0, 0%, 95%);
+  --color-drawing: hsl(234, 95%, 30%);
   --color-palette-black: hsl(0, 0%, 0%);
   --color-palette-white: hsl(0, 0%, 100%);
   --color-palette-bic: hsl(234, 95%, 30%);
