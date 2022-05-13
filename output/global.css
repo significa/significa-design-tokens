@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 13 May 2022 16:24:00 GMT
+ * Generated on Fri, 13 May 2022 16:38:00 GMT
  */
 
 :root {
@@ -75,7 +75,7 @@
   --opacity-xxxl: 0.8;
   --opacity-xxxxl: 0.9;
   --opacity-full: 1;
-  --font-family-sans: Sohne;
+  --font-family-sans: 'Sohne', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   --font-size-micro: 0.75rem;
   --font-size-sm: 1rem;
   --font-size-md: 1.125rem;

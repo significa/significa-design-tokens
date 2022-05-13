@@ -51,6 +51,31 @@ StyleDictionaryPackage.registerTransform({
   },
 });
 
+StyleDictionaryPackage.registerTransform({
+  name: "fonts/system-stack",
+  type: "value",
+  matcher: function (prop) {
+    return (
+      (["fontFamily"].includes(prop.attributes.category) &&
+        prop.name === "font-family-sans") ||
+      prop.name === "font-family-serif" ||
+      prop.name === "font-family-mono"
+    );
+  },
+  transformer: function (prop) {
+    const families = {
+      "font-family-sans":
+        "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif",
+      "font-family-serif":
+        "Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+      "font-family-mono":
+        "Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
+    };
+
+    return `'${prop.original.value}', ${families[prop.name]}`;
+  },
+});
+
 const StyleDictionary = StyleDictionaryPackage.extend({
   source: ["tokens/**/*.json"],
   platforms: {
@@ -62,6 +87,7 @@ const StyleDictionary = StyleDictionaryPackage.extend({
         "sizes/rem",
         "sizes/percentage-to-decimal",
         "fonts/sohne-weights",
+        "fonts/system-stack",
       ],
       transformGroup: "css",
       buildPath: "output/",
