@@ -83,6 +83,7 @@ const StyleDictionary = StyleDictionaryPackage.extend({
       transforms: [
         "attribute/cti",
         "name/cti/kebab",
+        "color/hsl",
         "sizes/px",
         "sizes/rem",
         "sizes/percentage-to-decimal",
@@ -104,7 +105,7 @@ const StyleDictionary = StyleDictionaryPackage.extend({
   },
 }).buildAllPlatforms();
 
-["light", "dark"].forEach((theme) => {
+["light", "dark", "yellow"].forEach((theme) => {
   StyleDictionaryPackage.extend({
     source: [`tokens/${theme}.json`],
     include: ["tokens/global.json"],

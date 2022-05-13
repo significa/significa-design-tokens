@@ -12,15 +12,16 @@ jobs:
 
       - run: npm ci
 
-      # Transform Figma Tokens JSON to something Style Dictionary can read
       - run: npx token-transformer tokens.json tokens/global.json global --resolveReferences false
-      # Create a light theme, exclude the global tokens
-      - run: npx token-transformer tokens.json tokens/light.json global,light,theme global --resolveReferences false
-      # Create a dark theme, exclude the global tokens
-      - run: npx token-transformer tokens.json tokens/dark.json global,dark,theme global --resolveReferences false
-      # Convert tokens according to Style Dictionary config
+
+      - run: npx token-transformer tokens.json tokens/light.json light --resolveReferences false
+
+      - run: npx token-transformer tokens.json tokens/dark.json dark --resolveReferences false
+
+      - run: npx token-transformer tokens.json tokens/yellow.json yellow --resolveReferences false
+
       - run: node build.js
-      # Add files that were created during a run, e.g. created files from style dictionary or token-transformer.
+
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: convert tokens"
