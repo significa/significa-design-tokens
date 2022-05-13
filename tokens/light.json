@@ -1,0 +1,41 @@
+{
+  "color": {
+    "background": {
+      "value": "{color.palette.gray.100}",
+      "type": "color"
+    },
+    "primary": {
+      "value": "{color.palette.gray.900}",
+      "type": "color"
+    },
+    "secondary": {
+      "value": "{color.palette.gray.500}",
+      "type": "color"
+    },
+    "tertiary": {
+      "value": "{color.palette.gray.400}",
+      "type": "color"
+    },
+    "subtle": {
+      "value": "{color.palette.gray.150}",
+      "type": "color",
+      "description": "For dividers and outlines"
+    },
+    "smooth": {
+      "value": "{color.palette.gray.200}",
+      "type": "color"
+    },
+    "offset": {
+      "value": "{color.palette.white}",
+      "type": "color"
+    },
+    "accent": {
+      "value": "{color.palette.yellow}",
+      "type": "color"
+    },
+    "drawing": {
+      "value": "{color.palette.bic}",
+      "type": "color"
+    }
+  }
+}
