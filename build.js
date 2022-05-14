@@ -1,5 +1,65 @@
 const StyleDictionaryPackage = require("style-dictionary");
 
+/**
+ * This custom formatter will pick up colors and return two rules:
+ * - color-hsl: The 3 HSL values of the color in the format h,s%,l%
+ * - color: using the hsl value above in the format --color: var(--color-hsl);
+ *
+ * This way we can use directly the color, or add opacity to it if needed:
+ * .foo {
+ *   color: var(--primary);
+ * }
+ *
+ * .bar {
+ *   color: hsl(var(--primary-hsl), var(--opacity-medium));
+ * }
+ */
+StyleDictionaryPackage.registerFormat({
+  name: "css/variables",
+  formatter: function ({ dictionary, options }) {
+    const props = dictionary.allProperties.reduce((acc, prop) => {
+      const isColor = prop.type === "color";
+      let name = prop.name;
+
+      if (isColor) {
+        name = `${prop.name}-hsl`;
+      }
+
+      if (dictionary.usesReference(prop.original.value)) {
+        const refs = dictionary.getReferences(prop.original.value);
+
+        refs.forEach((ref) => {
+          if (ref.value && ref.name) {
+            acc.push(`  --${name}: var(--${ref.name});`);
+          }
+        });
+      } else {
+        acc.push(`  --${name}: ${prop.value};`);
+      }
+
+      if (isColor) {
+        acc.push(`  --${prop.name}: hsl(var(--${name}));`);
+      }
+
+      return acc;
+    }, []);
+
+    return `${options.selector || ":root"} {\n` + props.join("\n") + `\n}`;
+  },
+});
+
+// converts colors from HEX to HSL (#FFFFFF -> 0,0%,100%)
+StyleDictionaryPackage.registerTransform({
+  name: "color/customHSL",
+  type: "value",
+  matcher: function (prop) {
+    return ["color"].includes(prop.attributes.category);
+  },
+  transformer: function (prop) {
+    return hexToHSL(prop.original.value);
+  },
+});
+
 StyleDictionaryPackage.registerTransform({
   name: "sizes/rem",
   type: "value",
@@ -77,13 +137,13 @@ StyleDictionaryPackage.registerTransform({
 });
 
 const StyleDictionary = StyleDictionaryPackage.extend({
-  source: ["tokens/**/*.json"],
+  source: ["tokens/global.json"],
   platforms: {
     css: {
       transforms: [
         "attribute/cti",
         "name/cti/kebab",
-        "color/hsl",
+        "color/customHSL",
         "sizes/px",
         "sizes/rem",
         "sizes/percentage-to-decimal",
@@ -130,3 +190,46 @@ const StyleDictionary = StyleDictionaryPackage.extend({
     },
   }).buildAllPlatforms();
 });
+
+// https://css-tricks.com/converting-color-spaces-in-javascript/
+function hexToHSL(H) {
+  // Convert hex to RGB first
+  let r = 0,
+    g = 0,
+    b = 0;
+  if (H.length == 4) {
+    r = "0x" + H[1] + H[1];
+    g = "0x" + H[2] + H[2];
+    b = "0x" + H[3] + H[3];
+  } else if (H.length == 7) {
+    r = "0x" + H[1] + H[2];
+    g = "0x" + H[3] + H[4];
+    b = "0x" + H[5] + H[6];
+  }
+  // Then to HSL
+  r /= 255;
+  g /= 255;
+  b /= 255;
+  let cmin = Math.min(r, g, b),
+    cmax = Math.max(r, g, b),
+    delta = cmax - cmin,
+    h = 0,
+    s = 0,
+    l = 0;
+
+  if (delta == 0) h = 0;
+  else if (cmax == r) h = ((g - b) / delta) % 6;
+  else if (cmax == g) h = (b - r) / delta + 2;
+  else h = (r - g) / delta + 4;
+
+  h = Math.round(h * 60);
+
+  if (h < 0) h += 360;
+
+  l = (cmax + cmin) / 2;
+  s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+  s = +(s * 100).toFixed(1);
+  l = +(l * 100).toFixed(1);
+
+  return h + "," + s + "%," + l + "%";
+}

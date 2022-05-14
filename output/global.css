@@ -1,36 +1,40 @@
-/**
- * Do not edit directly
- * Generated on Fri, 13 May 2022 17:22:36 GMT
- */
-
 :root {
-  --color-background: hsl(46, 90%, 63%);
-  --color-primary: hsl(240, 2%, 10%);
-  --color-secondary: hsl(0, 0%, 53%);
-  --color-tertiary: hsl(240, 0%, 42%);
-  --color-subtle: hsl(240, 1%, 15%);
-  --color-smooth: hsl(240, 1%, 21%);
-  --color-offset: hsl(0, 0%, 0%);
-  --color-accent: hsl(46, 90%, 63%);
-  --color-drawing: hsl(0, 0%, 95%);
-  --color-palette-black: hsl(0, 0%, 0%);
-  --color-palette-white: hsl(0, 0%, 100%);
-  --color-palette-bic: hsl(234, 95%, 30%);
-  --color-palette-yellow: hsl(46, 90%, 63%);
-  --color-palette-red: hsl(349, 100%, 59%);
-  --color-palette-green: hsl(177, 100%, 39%);
-  --color-palette-purple: hsl(280, 68%, 60%);
-  --color-palette-gray-100: hsl(0, 0%, 95%);
-  --color-palette-gray-150: hsl(0, 0%, 90%);
-  --color-palette-gray-200: hsl(0, 0%, 84%);
-  --color-palette-gray-300: hsl(0, 0%, 74%);
-  --color-palette-gray-400: hsl(0, 0%, 63%);
-  --color-palette-gray-500: hsl(0, 0%, 53%);
-  --color-palette-gray-600: hsl(240, 0%, 42%);
-  --color-palette-gray-700: hsl(240, 1%, 31%);
-  --color-palette-gray-800: hsl(240, 1%, 21%);
-  --color-palette-gray-850: hsl(240, 1%, 15%);
-  --color-palette-gray-900: hsl(240, 2%, 10%);
+  --color-palette-black-hsl: 0,0%,0%;
+  --color-palette-black: hsl(var(--color-palette-black-hsl));
+  --color-palette-white-hsl: 0,0%,100%;
+  --color-palette-white: hsl(var(--color-palette-white-hsl));
+  --color-palette-bic-hsl: 234,94.8%,30%;
+  --color-palette-bic: hsl(var(--color-palette-bic-hsl));
+  --color-palette-yellow-hsl: 46,90.4%,63.1%;
+  --color-palette-yellow: hsl(var(--color-palette-yellow-hsl));
+  --color-palette-red-hsl: 349,100%,58.8%;
+  --color-palette-red: hsl(var(--color-palette-red-hsl));
+  --color-palette-green-hsl: 177,100%,39%;
+  --color-palette-green: hsl(var(--color-palette-green-hsl));
+  --color-palette-purple-hsl: 280,68%,59.6%;
+  --color-palette-purple: hsl(var(--color-palette-purple-hsl));
+  --color-palette-gray-100-hsl: 0,0%,94.9%;
+  --color-palette-gray-100: hsl(var(--color-palette-gray-100-hsl));
+  --color-palette-gray-150-hsl: 0,0%,89.8%;
+  --color-palette-gray-150: hsl(var(--color-palette-gray-150-hsl));
+  --color-palette-gray-200-hsl: 0,0%,84.3%;
+  --color-palette-gray-200: hsl(var(--color-palette-gray-200-hsl));
+  --color-palette-gray-300-hsl: 0,0%,73.7%;
+  --color-palette-gray-300: hsl(var(--color-palette-gray-300-hsl));
+  --color-palette-gray-400-hsl: 0,0%,63.1%;
+  --color-palette-gray-400: hsl(var(--color-palette-gray-400-hsl));
+  --color-palette-gray-500-hsl: 0,0%,52.5%;
+  --color-palette-gray-500: hsl(var(--color-palette-gray-500-hsl));
+  --color-palette-gray-600-hsl: 240,0.5%,41.8%;
+  --color-palette-gray-600: hsl(var(--color-palette-gray-600-hsl));
+  --color-palette-gray-700-hsl: 240,0.6%,31.2%;
+  --color-palette-gray-700: hsl(var(--color-palette-gray-700-hsl));
+  --color-palette-gray-800-hsl: 240,1%,20.6%;
+  --color-palette-gray-800: hsl(var(--color-palette-gray-800-hsl));
+  --color-palette-gray-850-hsl: 240,1.3%,15.5%;
+  --color-palette-gray-850: hsl(var(--color-palette-gray-850-hsl));
+  --color-palette-gray-900-hsl: 240,2%,10%;
+  --color-palette-gray-900: hsl(var(--color-palette-gray-900-hsl));
   --space-0: 0rem;
   --space-1: 0.0625rem;
   --space-2: 0.125rem;
