@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-/**
- * Do not edit directly
- * Generated on Fri, 13 May 2022 17:34:29 GMT
- */
-
->>>>>>> ff44e22eb3034b2873487a32ed90645f1078c833
 [data-theme="dark"] {
   --color-background-hsl: var(--color-palette-gray-900);
   --color-background: hsl(var(--color-background-hsl));
