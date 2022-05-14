@@ -1,5 +1,8 @@
 name: CI
-on: [push]
+on:
+  push:
+    paths:
+      - "tokens.json"
 
 jobs:
   build:
@@ -12,15 +15,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npx token-transformer tokens.json tokens/global.json global --resolveReferences false
-
-      - run: npx token-transformer tokens.json tokens/light.json light --resolveReferences false
-
-      - run: npx token-transformer tokens.json tokens/dark.json dark --resolveReferences false
-
-      - run: npx token-transformer tokens.json tokens/yellow.json yellow --resolveReferences false
-
-      - run: node build.js
+      - run: npm run generate
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:

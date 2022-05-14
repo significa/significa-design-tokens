@@ -1,4 +1,8 @@
 const StyleDictionaryPackage = require("style-dictionary");
+const tinyColor = require("tinycolor2");
+const tokens = require("./tokens.json");
+
+const sets = Object.keys(tokens).filter((key) => key !== "$themes");
 
 /**
  * This custom formatter will pick up colors and return two rules:
@@ -56,7 +60,11 @@ StyleDictionaryPackage.registerTransform({
     return ["color"].includes(prop.attributes.category);
   },
   transformer: function (prop) {
-    return hexToHSL(prop.original.value);
+    const { h, s, l } = tinyColor(prop.original.value).toHsl();
+
+    return `${Math.round(h)}, ${(s * 100).toFixed(1)}%, ${(l * 100).toFixed(
+      1
+    )}%`;
   },
 });
 
@@ -136,41 +144,22 @@ StyleDictionaryPackage.registerTransform({
   },
 });
 
-const StyleDictionary = StyleDictionaryPackage.extend({
-  source: ["tokens/global.json"],
-  platforms: {
-    css: {
-      transforms: [
-        "attribute/cti",
-        "name/cti/kebab",
-        "color/customHSL",
-        "sizes/px",
-        "sizes/rem",
-        "sizes/percentage-to-decimal",
-        "fonts/sohne-weights",
-        "fonts/system-stack",
-      ],
-      transformGroup: "css",
-      buildPath: "output/",
-      files: [
-        {
-          destination: "global.css",
-          format: "css/variables",
-          filter: (token) => {
-            return token.isSource && token.type !== "typography";
-          },
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms();
-
-["light", "dark", "yellow"].forEach((theme) => {
+sets.forEach((theme) => {
   StyleDictionaryPackage.extend({
     source: [`tokens/${theme}.json`],
     include: ["tokens/global.json"],
     platforms: {
       css: {
+        transforms: [
+          "attribute/cti",
+          "name/cti/kebab",
+          "color/customHSL",
+          "sizes/px",
+          "sizes/rem",
+          "sizes/percentage-to-decimal",
+          "fonts/sohne-weights",
+          "fonts/system-stack",
+        ],
         transformGroup: "css",
         buildPath: "output/",
         files: [
@@ -178,10 +167,13 @@ const StyleDictionary = StyleDictionaryPackage.extend({
             destination: `${theme}.css`,
             format: "css/variables",
             filter: (token) => {
-              return token.isSource;
+              return token.isSource && token.type !== "typography";
             },
             options: {
-              selector: `[data-theme="${theme}"]`,
+              selector:
+                theme === "global"
+                  ? ":root"
+                  : `[data-theme="${theme}"], .${theme}-theme`,
               outputReferences: true,
             },
           },
@@ -190,46 +182,3 @@ const StyleDictionary = StyleDictionaryPackage.extend({
     },
   }).buildAllPlatforms();
 });
-
-// https://css-tricks.com/converting-color-spaces-in-javascript/
-function hexToHSL(H) {
-  // Convert hex to RGB first
-  let r = 0,
-    g = 0,
-    b = 0;
-  if (H.length == 4) {
-    r = "0x" + H[1] + H[1];
-    g = "0x" + H[2] + H[2];
-    b = "0x" + H[3] + H[3];
-  } else if (H.length == 7) {
-    r = "0x" + H[1] + H[2];
-    g = "0x" + H[3] + H[4];
-    b = "0x" + H[5] + H[6];
-  }
-  // Then to HSL
-  r /= 255;
-  g /= 255;
-  b /= 255;
-  let cmin = Math.min(r, g, b),
-    cmax = Math.max(r, g, b),
-    delta = cmax - cmin,
-    h = 0,
-    s = 0,
-    l = 0;
-
-  if (delta == 0) h = 0;
-  else if (cmax == r) h = ((g - b) / delta) % 6;
-  else if (cmax == g) h = (b - r) / delta + 2;
-  else h = (r - g) / delta + 4;
-
-  h = Math.round(h * 60);
-
-  if (h < 0) h += 360;
-
-  l = (cmax + cmin) / 2;
-  s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
-  s = +(s * 100).toFixed(1);
-  l = +(l * 100).toFixed(1);
-
-  return h + "," + s + "%," + l + "%";
-}

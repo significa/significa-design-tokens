@@ -2,12 +2,18 @@
   "name": "significa-design-tokens",
   "version": "1.0.0",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "generate:tokens": "node generateTokens.js",
+    "generate:css": "node generateCss.js",
+    "generate": "npm run generate:tokens && npm run generate:css"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/significa/significa-design-tokens.git"
   },
   "dependencies": {
-    "style-dictionary": "^3.7.0"
+    "style-dictionary": "^3.7.0",
+    "tinycolor2": "^1.4.2",
+    "token-transformer": "^0.0.22"
   }
 }

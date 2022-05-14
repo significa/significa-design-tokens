@@ -1,4 +1,4 @@
-[data-theme="light"] {
+[data-theme="light"], .light-theme {
   --color-background-hsl: var(--color-palette-gray-100);
   --color-background: hsl(var(--color-background-hsl));
   --color-primary-hsl: var(--color-palette-gray-900);

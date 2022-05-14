@@ -1,4 +1,4 @@
-[data-theme="dark"] {
+[data-theme="dark"], .dark-theme {
   --color-background-hsl: var(--color-palette-gray-900);
   --color-background: hsl(var(--color-background-hsl));
   --color-primary-hsl: var(--color-palette-gray-100);
