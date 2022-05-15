@@ -272,10 +272,6 @@
       "value": "12",
       "type": "fontSizes"
     },
-    "mini": {
-      "value": "14",
-      "type": "fontSizes"
-    },
     "sm": {
       "value": "16",
       "type": "fontSizes"
@@ -507,19 +503,6 @@
       },
       "type": "typography"
     },
-    "smallTitle": {
-      "value": {
-        "fontFamily": "Sohne",
-        "fontWeight": "Halbfett",
-        "lineHeight": "105%",
-        "fontSize": 18,
-        "letterSpacing": "0%",
-        "paragraphSpacing": 0,
-        "textDecoration": "none",
-        "textCase": "none"
-      },
-      "type": "typography"
-    },
     "small": {
       "value": {
         "fontFamily": "Sohne",
@@ -539,19 +522,6 @@
         "fontWeight": "Kräftig",
         "lineHeight": "115%",
         "fontSize": 16,
-        "letterSpacing": "0%",
-        "paragraphSpacing": 0,
-        "textDecoration": "none",
-        "textCase": "none"
-      },
-      "type": "typography"
-    },
-    "micro": {
-      "value": {
-        "fontFamily": "Sohne",
-        "fontWeight": "Kräftig",
-        "lineHeight": "115%",
-        "fontSize": 14,
         "letterSpacing": "0%",
         "paragraphSpacing": 0,
         "textDecoration": "none",
