@@ -272,6 +272,10 @@
       "value": "12",
       "type": "fontSizes"
     },
+    "mini": {
+      "value": "14",
+      "type": "fontSizes"
+    },
     "sm": {
       "value": "16",
       "type": "fontSizes"
