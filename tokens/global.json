@@ -265,6 +265,11 @@
     "sans": {
       "value": "Sohne",
       "type": "fontFamilies"
+    },
+    "mono": {
+      "value": "Menlo",
+      "type": "fontFamilies",
+      "description": "To use on code snippets"
     }
   },
   "fontSize": {
