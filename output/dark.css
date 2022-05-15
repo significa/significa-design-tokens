@@ -1,20 +1,20 @@
 [data-theme="dark"], .dark-theme {
-  --color-background-hsl: var(--color-palette-gray-900);
+  --color-background-hsl: var(--color-palette-gray-900-hsl);
   --color-background: hsl(var(--color-background-hsl));
-  --color-primary-hsl: var(--color-palette-gray-100);
+  --color-primary-hsl: var(--color-palette-gray-100-hsl);
   --color-primary: hsl(var(--color-primary-hsl));
-  --color-secondary-hsl: var(--color-palette-gray-500);
+  --color-secondary-hsl: var(--color-palette-gray-500-hsl);
   --color-secondary: hsl(var(--color-secondary-hsl));
-  --color-tertiary-hsl: var(--color-palette-gray-600);
+  --color-tertiary-hsl: var(--color-palette-gray-600-hsl);
   --color-tertiary: hsl(var(--color-tertiary-hsl));
-  --color-subtle-hsl: var(--color-palette-gray-850);
+  --color-subtle-hsl: var(--color-palette-gray-850-hsl);
   --color-subtle: hsl(var(--color-subtle-hsl));
-  --color-smooth-hsl: var(--color-palette-gray-800);
+  --color-smooth-hsl: var(--color-palette-gray-800-hsl);
   --color-smooth: hsl(var(--color-smooth-hsl));
-  --color-offset-hsl: var(--color-palette-black);
+  --color-offset-hsl: var(--color-palette-black-hsl);
   --color-offset: hsl(var(--color-offset-hsl));
-  --color-accent-hsl: var(--color-palette-yellow);
+  --color-accent-hsl: var(--color-palette-yellow-hsl);
   --color-accent: hsl(var(--color-accent-hsl));
-  --color-drawing-hsl: var(--color-palette-gray-100);
+  --color-drawing-hsl: var(--color-palette-gray-100-hsl);
   --color-drawing: hsl(var(--color-drawing-hsl));
 }

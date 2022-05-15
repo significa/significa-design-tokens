@@ -34,7 +34,11 @@ StyleDictionaryPackage.registerFormat({
 
         refs.forEach((ref) => {
           if (ref.value && ref.name) {
-            acc.push(`  --${name}: var(--${ref.name});`);
+            if (isColor && ref.attributes.category === "color") {
+              acc.push(`  --${name}: var(--${ref.name}-hsl);`);
+            } else {
+              acc.push(`  --${name}: var(--${ref.name});`);
+            }
           }
         });
       } else {
@@ -145,6 +149,17 @@ StyleDictionaryPackage.registerTransform({
 });
 
 sets.forEach((theme) => {
+  let selectors = [];
+
+  if (theme === "global" || theme === "light") {
+    selectors.push(":root");
+  }
+
+  if (theme !== "global") {
+    selectors.push(`[data-theme="${theme}"]`);
+    selectors.push(`.${theme}-theme`);
+  }
+
   StyleDictionaryPackage.extend({
     source: [`tokens/${theme}.json`],
     include: ["tokens/global.json"],
@@ -170,10 +185,7 @@ sets.forEach((theme) => {
               return token.isSource && token.type !== "typography";
             },
             options: {
-              selector:
-                theme === "global"
-                  ? ":root"
-                  : `[data-theme="${theme}"], .${theme}-theme`,
+              selector: selectors.join(", "),
               outputReferences: true,
             },
           },
