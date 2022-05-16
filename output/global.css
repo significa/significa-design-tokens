@@ -71,14 +71,8 @@
   --radius-xxxxl: 999px;
   --border-width-sm: 1px;
   --opacity-none: 0;
-  --opacity-sm: 0.05;
-  --opacity-md: 0.1;
-  --opacity-lg: 0.2;
-  --opacity-xl: 0.4;
-  --opacity-xxl: 0.5;
-  --opacity-xxxl: 0.8;
-  --opacity-xxxxl: 0.9;
-  --opacity-full: 1;
+  --opacity-subtle: 0.05;
+  --opacity-mid: 0.4;
   --font-family-sans: 'Sohne', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   --font-family-mono: 'Menlo', Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
   --font-size-micro: 0.75rem;
