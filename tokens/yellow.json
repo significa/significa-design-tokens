@@ -1,51 +1,51 @@
 {
   "background": {
-    "value": "{colour.pallete.gray-900}",
-    "type": "color",
-    "failedToResolve": true
-  },
-  "foreground": {
-    "value": "{colour.pallete.gray-25}",
-    "type": "color",
-    "failedToResolve": true
-  },
-  "secondary": {
-    "value": "{colour.pallete.gray-300}",
-    "type": "color",
-    "failedToResolve": true
-  },
-  "tertiary": {
-    "value": "{colour.pallete.gray-400}",
-    "type": "color",
-    "failedToResolve": true
-  },
-  "offset": {
-    "value": "{colour.pallete.gray-850}",
-    "type": "color",
-    "failedToResolve": true
-  },
-  "smooth": {
-    "value": "{colour.pallete.gray-800}",
-    "type": "color",
-    "failedToResolve": true
-  },
-  "muted": {
-    "value": "{colour.pallete.gray-700}",
-    "type": "color",
-    "failedToResolve": true
-  },
-  "accent": {
     "value": "{colour.pallete.yellow}",
     "type": "color",
     "failedToResolve": true
   },
-  "drawing": {
+  "foreground": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.09})",
+    "type": "color",
+    "failedToResolve": true
+  },
+  "secondary": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.06})",
+    "type": "color",
+    "failedToResolve": true
+  },
+  "tertiary": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.04})",
+    "type": "color",
+    "failedToResolve": true
+  },
+  "offset": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.006})",
+    "type": "color",
+    "failedToResolve": true
+  },
+  "smooth": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.01})",
+    "type": "color",
+    "failedToResolve": true
+  },
+  "muted": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.02})",
+    "type": "color",
+    "failedToResolve": true
+  },
+  "accent": {
     "value": "{colour.pallete.gray-25}",
     "type": "color",
     "failedToResolve": true
   },
+  "drawing": {
+    "value": "{colour.pallete.gray-900}",
+    "type": "color",
+    "failedToResolve": true
+  },
   "panel": {
-    "value": "{colour.pallete.gray-850}",
+    "value": "rgba({colour.pallete.gray-900}, {opacity.01})",
     "type": "color",
     "failedToResolve": true
   },

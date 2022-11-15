@@ -1,4 +1,66 @@
 {
+  "tokenSetOrder": {
+    "0": {
+      "value": "global",
+      "type": "other"
+    },
+    "1": {
+      "value": "light",
+      "type": "other"
+    },
+    "2": {
+      "value": "dark",
+      "type": "other"
+    },
+    "3": {
+      "value": "yellow",
+      "type": "other"
+    }
+  },
+  "background": {
+    "value": "{colour.pallete.yellow}",
+    "type": "color"
+  },
+  "foreground": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.09})",
+    "type": "color"
+  },
+  "secondary": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.06})",
+    "type": "color"
+  },
+  "tertiary": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.04})",
+    "type": "color"
+  },
+  "offset": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.006})",
+    "type": "color"
+  },
+  "smooth": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.01})",
+    "type": "color"
+  },
+  "muted": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.02})",
+    "type": "color"
+  },
+  "accent": {
+    "value": "{colour.pallete.gray-25}",
+    "type": "color"
+  },
+  "drawing": {
+    "value": "{colour.pallete.gray-900}",
+    "type": "color"
+  },
+  "panel": {
+    "value": "rgba({colour.pallete.gray-900}, {opacity.01})",
+    "type": "color"
+  },
+  "danger": {
+    "value": "{colour.pallete.red}",
+    "type": "color"
+  },
   "colour": {
     "pallete": {
       "black": {
